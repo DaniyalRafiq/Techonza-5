@@ -110,6 +110,29 @@
 .single_cards_main.home_single_cards_main{
    grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
 }
+.hero_main::before
+,.hero_main::after
+   {
+   content: none;
+}
+.hero_main{
+   background-image: none;
+   background-color: white;
+}
+.hero_form{
+   align-items: center;
+}
+.hero_tags{
+   align-items: center;
+   justify-content: center;
+}
+
+.hero_form h4{
+   text-align: center;
+}
+.hero_form p{
+   text-align: center;
+}
 }
 
 @media (max-width: 640px) {
@@ -170,4 +193,5 @@
       .card_filter{
          display: none;
       }
+
 }
