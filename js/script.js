@@ -44,8 +44,3 @@ var swiper = new Swiper(".store_swiper", {
 
   
 });
-  // $(document).ready(function() {
-  //   $("input").click(function() {
-  //     $(this).css("border", "2px solid red");
-  //   });
-  // });

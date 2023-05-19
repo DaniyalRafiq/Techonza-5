@@ -143,6 +143,9 @@
 .hero_form p{
    text-align: center;
 }
+header.sticky {
+   position: sticky;
+   top: -50px;
 }
 
 @media (max-width: 640px) {
