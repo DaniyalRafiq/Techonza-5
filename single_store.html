@@ -19,7 +19,7 @@
 <body>
 
    <!-- ==========Header========== -->
-   <header>
+  <header>
       <div class="header_top">
          <div class="container">
             <div class="row">
@@ -31,14 +31,14 @@
                      <div class="header_top_form">
                         <form class="form footer_icons">
                            <input type="text" placeholder="Search">
-                           <button type="button">Submit</button>
-                        </form>
+                             <button type="button" class="top_btn"><i class="ti ti-search"></i> Search</button>
+                        </form> 
                      </div>
                      <div class="icons header_icons">
-                        <a href="#" class="social_icons"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#" class="social_icons"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        <a href="#" class="social_icons"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#" class="social_icons"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#" class="social_icons facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" class="social_icons instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="social_icons twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" class="social_icons linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                      </div>
                   </div>
                </div>
@@ -55,9 +55,9 @@
                      </div>
                      <div class="nav_links">
                         <ul>
-                           <li><a href="index.html" class="nav_link">Home</a></li>
+                           <li><a href="index.html" class="nav_link active">Home</a></li>
                            <li><a href="about.html" class="nav_link">About</a></li>
-                           <li><a href="store.html" class="nav_link active ">Store</a></li>
+                           <li><a href="store.html" class="nav_link">Store</a></li>
                            <li><a href="categories.html" class="nav_link">Category</a></li>
                            <li><a href="contact.html" class="nav_link">Contact</a></li>
                         </ul>
@@ -71,6 +71,7 @@
             </div>
          </div>
       </div>
+
    </header>
 
    <!-- ==========SIngle Store Secttion========= -->
@@ -236,41 +237,51 @@
       </div>
    </section>
    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"  aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-dialog modal-dialog-centered  ">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close_btn" data-bs-dismiss="modal">
                <i class="ti ti-x"></i>
             </button>
-            <h1 class="modal-title fs-5 modal_title" id="exampleModalLabel">             Up To 90% Discount On Selected Items - Last Chance Sale</h1>
-          </div>
+                    </div>
           <div class="modal-body">
-            <div class="modal_card">
-               <div class="modal_img">
-                  <img src="images/Store/store_2.png" alt="">
-               </div>
-               <div class="modal_content">
-                  <p class="modal_details">
-                     Dreaming of a 15% discount on your favorite products? You're at the right place! enter the discount code provided above at 
-                  </p>
-                  <div class="single_card_date">
-                     <div class="time">
-                        <i class="ti ti-clock"></i><span>Exipre: 10, Sep, 2022</span>
+            <div class="modal_coupon">
+               <div class="modal_coupon_content">
+                     <h4>
+                        Up To 90% Discount On Selected Items - Last Chance Sale
+                     </h4>
+                     <div class="coupon_tags">
+                        <div class="coupons_icons users">
+                           <i class="ti ti-users"></i> Uses : 354
+                        </div>
+                        <div class="coupons_icons added">
+                                 <i class="ti ti-clock-2"></i> Added : 1, Sep 2022
+                        </div>
+                        <div class="coupons_icons exp">
+                           <i class="ti ti-clock"></i> Expire : 1, Sep 2022
+                        </div>
                      </div>
-                  </div>
                </div>
+          
+               <div class="coupon_img">
+                  <img src="images/Store/store_1.png" alt="">
+               </div>
+        
             </div>
+            <p class="coupon_details" >
+               Dreaming of a 15% discount on your favorite products? You're at the right place! enter the discount code provided above at checkout and score 15% saving on all your orders placed at lavish alice. Yes it's as simple as that! Hurry up and save now!
+            </p>
           </div>
           <div class="modal-footer">
             <div class="copy_btn">
-               <div class="copy">
+               <div class="copy click_top_copy">
                   <i class="ti ti-copy"></i>
                </div>
-               <a href="#" class="copy_code">
+               <a href="#" class="copy_code" data-copytext="5_*-48Hsad8">
                   5_*-48Hsad8
                </a>
             </div>
-            <div class="code_copy">
+            <div class="code_copy copy_status copy_code" data-copytext="5_*-48Hsad8">
                Click Here To <a href="">Copy Code</a>
             </div>
          </div>
@@ -278,31 +289,31 @@
       </div>
     </div>
    <!-- ===========Footer========== -->
- <footer class="kilimanjaro_area">
+  <footer class="kilimanjaro_area">
       <!-- Top Footer Area Start -->
       <div class="foo_top_header_one">
           <div class="container">
               <div class="row">
-                  <div class="col-12 col-md-6 col-lg-3 footer_first_col">
-                      <div class="kilimanjaro_part  ">
+               <div class="footer_main">
+                  <div class="footer_first_col">
+                      <div class="kilimanjaro_part footer_top  ">
                         <a href="index.html" class="logo logo_bottom">
                            <img src="images/logo.svg" alt="">
                         </a>
                           <p>It includes rich features & contents. It's designed & developed based on One Page/ Multi-page Layout,blog themes,world press themes and blogspot. You can use any layout from any demo anywhere.</p>
                           <p>webblogoverflow is completely creative, clean & 100% responsive website. Put your business into next level with Webublogoverflow.</p>
                       </div>
-                      <div class="kilimanjaro_part m-top-15">
+                      <div class="kilimanjaro_part m-top-15 f_social ">
                           <h5 class="footer_heading">Social Links</h5>
-                          <ul class="kilimanjaro_social_links">
-                              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> </a></li>
-                              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> </a></li>
-                              <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                              <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i> </a></li>
-                              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                          </ul>
+                          <div class="icons footer_icons">
+                           <a href="#" class="social_icons facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                           <a href="#" class="social_icons instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                           <a href="#" class="social_icons twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                           <a href="#" class="social_icons linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </div>
                       </div>
                   </div>
-                  <div class="col-12 col-md-6 col-lg-3">
+                  <div class="footer_links">
                       <div class="kilimanjaro_part space">
                           <h5>Tags Widget</h5>
                           <ul class=" kilimanjaro_widget">
@@ -317,7 +328,7 @@
                           </ul>
                       </div>
 
-                      <div class="kilimanjaro_part m-top-15">
+                      <div class="kilimanjaro_part m-top-15 footer_sub_links">
                           <h5>Important Links</h5>
                           <ul class="kilimanjaro_links">
                               <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Home</a></li>
@@ -328,8 +339,8 @@
                           </ul>
                       </div>
                   </div>
-                  <div class="col-12 col-md-6 col-lg-3">
-                      <div class="kilimanjaro_part">
+                  <div class="footer_post">
+                      <div class="kilimanjaro_part footer_blog">
                           <h5>Latest News</h5>
                           <div class="kilimanjaro_blog_area">
                               <div class="kilimanjaro_thumb">
@@ -358,19 +369,20 @@
                           </div>
                       </div>
                   </div>
-                  <div class="col-12 col-md-6 col-lg-3">
+                  <div class="footer_contact">
                       <div class="kilimanjaro_part">
                           <h5>Quick Contact</h5>
                           <div class="kilimanjaro_single_contact_info">
-                              <h5>Phone:</h5>
+                              <h5> <span><i class="ti ti-phone"></i></span> Phone:</h5>
                               <p>+255 789 54 50 40 <br> +2255 766 90 94 00</p>
                           </div>
                           <div class="kilimanjaro_single_contact_info">
-                              <h5>Email:</h5>
+                      <h5><span><i class="ti ti-mail"></i></span> Email:</h5>
                               <p>support@webblogoverflow.com <br> luckmoshy@gmail.com</p>
                           </div>
                       </div>
                    </div>
+               </div>
               </div>
           </div>
       </div>

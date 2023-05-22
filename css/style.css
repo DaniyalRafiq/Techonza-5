@@ -5,7 +5,6 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Barlow', sans-serif;
-    position: relative;
 }
 
 :root {
@@ -196,11 +195,15 @@ header.sticky {
 
 
 @keyframes shake {
-    0% { transform: translateY(1); }
-  
-    100% { transform: translateY(-6px); }
-  }
-  
+    0% {
+        transform: translateY(1);
+    }
+
+    100% {
+        transform: translateY(-6px);
+    }
+}
+
 
 
 @keyframes scroll {
@@ -318,7 +321,7 @@ header {
 }
 
 .nav_link {
-    color: white;
+    color: #d6d4d4;
     position: relative;
     transition: all .2s ease-in-out;
     font-weight: 600;
@@ -326,7 +329,7 @@ header {
 
 .nav_link:hover,
 .nav_link.active {
-    color: var(--primary-300) !important;
+    color: white;
 }
 
 .nav_link:after {
@@ -353,7 +356,7 @@ header {
 
 .nav_link.active:after,
 .nav_link:hover:after {
-    background-color: var(--primary-300) !important;
+    background-color: #d6d4d4;
     left: -12px;
     transition: 0.3s;
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
@@ -418,6 +421,7 @@ header {
     background-position: -830px;
     animation: shake 1s infinite alternate-reverse;
 }
+
 .back:after {
     content: "";
     position: absolute;
@@ -427,6 +431,7 @@ header {
     background: white;
     z-index: 4;
 }
+
 .hero_main::before {
     content: "";
     position: absolute;
@@ -479,6 +484,11 @@ header {
     gap: 10px;
     max-width: 580px;
     justify-content: left;
+}
+
+.tag_items:hover {
+    background: var(--secondary-200);
+    color: white;
 }
 
 .hero_form h4 span {
@@ -575,7 +585,7 @@ header {
     height: 10px;
     width: 13px;
     left: 100%;
-    bottom: 0;
+    bottom: -2px;
     clip-path: polygon(55% 100%, 0 0, 0 98%);
     filter: brightness(0.8);
 }
@@ -587,7 +597,7 @@ header {
     height: 10px;
     width: 13px;
     right: 100%;
-    bottom: 0;
+    bottom: -2px;
     clip-path: polygon(55% 100%, 0 0, 0 98%);
     filter: brightness(0.8);
     clip-path: polygon(100% 100%, 100% 0, 54% 100%);
@@ -1029,6 +1039,7 @@ header {
     text-align: center;
     transition: 0.3s;
     width: 80%;
+    position: relative;
 }
 
 .store_card_title h4 {
@@ -1040,6 +1051,7 @@ header {
     color: white;
     transition: 0.3s;
     border-radius: 5px 5px 0 0;
+    position: relative;
 }
 
 .store_card:hover .store_card_title {
@@ -1124,7 +1136,7 @@ header {
 
 .popular_store {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(83px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(152px, 1fr));
     gap: 15px;
 }
 
@@ -1209,7 +1221,7 @@ header {
     flex-flow: wrap;
     flex: 1;
     position: sticky;
-    top: 0;
+    top: 80px;
 }
 
 .contact_field:has(textarea) {
@@ -1274,12 +1286,7 @@ header {
 }
 
 .social_media i {
-    font-size: 25px;
-    background: red;
-    padding: 5px;
-    border-radius: 5px;
-    color: white;
-    border-radius: 50px;
+    font-size: 22px;
 }
 
 .sidebar_media {
@@ -1291,6 +1298,40 @@ header {
 .social_media p {
     font-size: 17px;
     font-weight: 500;
+}
+
+.icon {
+    font-size: 25px;
+    background: var(--secondary-600);
+    border-radius: 5px;
+    color: white;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit_btn {
+    padding: 6px 22px;
+    background: var(--primary-100);
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    display: flex;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.submit_main {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit_btn:hover {
+    background: var(--primary-200);
 }
 
 /*==========Contact_us end ========== */
@@ -1409,13 +1450,129 @@ header {
 }
 
 .time,
-.users {
+.users,
+.coupons_icons {
     font-size: 14px;
     display: flex;
     align-items: center;
     gap: 4px;
     line-height: 1;
     font-weight: 600;
+}
+
+.coupon_tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal_coupon {
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 5px #d1d5db;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 20px;
+    background: #f3f4f6;
+    flex-direction: row-reverse;
+}
+
+.modal-dialog.modal-dialog-centered {
+    --bs-modal-width: 630px;
+}
+
+.coupon_img {
+    height: 100px;
+    overflow: hidden;
+    flex: 0 0 100px;
+    box-shadow: 0px 0px 4px #0005;
+    padding: 6px;
+    border-radius: 5px;
+    background: white;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.copy_btn a:after {
+    content: "Get Code";
+    background: red;
+    height: 100%;
+    width: 100%;
+    background: #f5607e;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    animation: buttonAnimation .5s ease-in-out 1 alternate both;
+}
+
+@keyframes buttonAnimation {
+    0% {
+        opacity: 1;
+        width: 100%;
+    }
+    75% {
+        opacity: 0;
+    }
+    80% {
+        font-size: 0px;
+    }
+    90% {
+        width: 0%;
+    }
+    100% {
+        display: none;
+        width: 0;
+        font-size: 0px;
+    }
+}
+
+.coupon_details {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.coupon_img img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.users {
+    color: green;
+}
+
+.added {
+    color: var(--secondary-600);
+}
+
+.exp {
+    color: red;
+    position: absolute;
+    top: 188px;
+    left: 481px;
+    font-size: 14px;
+    font-weight: 400;
+    display: none;
+}
+
+.modal_coupon_content h4 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.modal_coupon_content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
 .single_title h4 {
@@ -1528,7 +1685,12 @@ header {
     gap: 8px;
     display: flex;
 }
-.store_cate_btn i {transition: 0.3s;margin-left: -10px;opacity: 0;}
+
+.store_cate_btn i {
+    transition: 0.3s;
+    margin-left: -10px;
+    opacity: 0;
+}
 
 .store_cate_btn:hover i {
     margin-left: 0;
@@ -1570,7 +1732,13 @@ header {
     justify-content: center;
     width: 35px;
     color: white;
-    font-weight: 700;
+    font-weight: 600;
+}
+
+.alphabet_main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 /*==========Store page End  ========== */
@@ -1670,8 +1838,14 @@ h4.single_top_title {
     font-size: 14px;
 }
 
+.rating_star {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
 .rating_star i {
-    font-size: 19px;
+    font-size: 22px;
 }
 
 .card_filter {
@@ -1757,7 +1931,8 @@ h4.single_top_title {
 
 .modal_details {
     font-size: 15px;
-    font-size: 500;
+    font-weight: 600;
+    color: black;
 }
 
 .close_btn {
@@ -1765,7 +1940,7 @@ h4.single_top_title {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--secondary-200);
+    background: var(--primary-200);
     position: absolute;
     z-index: 2;
     top: 0;
@@ -1779,7 +1954,11 @@ h4.single_top_title {
 }
 
 .modal-header {
+    background: white;
     padding: 15px 20px;
+    color: white;
+    border: none;
+    padding: 0;
 }
 
 .close_btn i {
@@ -1792,14 +1971,15 @@ h4.single_top_title {
 }
 
 .close_btn:hover {
-    background: var(--secondary-800);
+    background: var(--primary-200);
 }
 
 .modal-footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: var(--secondary-500);
+    background: #f0f0f0;
+    padding: 2px 0;
 }
 
 .modal-footer>* {
@@ -1809,20 +1989,22 @@ h4.single_top_title {
 .copy_btn {
     display: flex;
     padding: 10px;
+    cursor: pointer;
 }
 
 .copy_btn a {
-    border: 1px dashed var(--primary-500);
+    border: 1px dashed var(--primary-100);
     padding: 5px 50px;
     font-size: 20px;
     font-weight: 600;
     border-radius: 0px 5px 5px 0;
-    color: white;
+    color: black;
+    position: relative;
 }
 
 .copy {
     padding: 5px 20px;
-    background: var(--primary-500);
+    background: var(--primary-100);
     border-radius: 5px 0 0 5px;
     display: flex;
     align-items: center;
@@ -1837,11 +2019,11 @@ h4.single_top_title {
 .code_copy {
     font-size: 13px;
     font-weight: 500;
-    color: white;
+    color: #959191;
 }
 
 .code_copy a {
-    color: var(--seconday-200);
+    color: var(--secondary-200);
     text-decoration: underline;
 }
 
@@ -1912,7 +2094,7 @@ h4.single_top_title {
     padding: 10px;
     border-radius: 0 0 5px 5px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(137px, 1fr));
     gap: 20px;
     max-height: 300px;
     overflow-y: auto;
@@ -2197,6 +2379,7 @@ ol li {
     justify-content: center;
     background: #1c1c26;
 }
+
 .kilimanjaro_blog_area:hover {
     border-color: white;
 }
@@ -2453,18 +2636,22 @@ ol li {
     width: 100%;
     object-fit: cover;
 }
+
 .single_blog_main_heading {
     font-size: 24px;
     font-weight: 600;
 }
+
 .details_first {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 .single_blog_img_2 {
     height: 200px;
 }
+
 .single_blog_tags {
     display: flex;
     flex-wrap: wrap;
@@ -2490,6 +2677,7 @@ ol li {
     color: white;
     border-color: transparent;
 }
+
 .single_tags_main {
     display: flex;
     align-items: center;
@@ -2498,6 +2686,7 @@ ol li {
     border-right: 0;
     gap: 11px;
 }
+
 .singl_tag_heading h4 {
     font-size: 20px;
     font-weight: 600;
@@ -2510,7 +2699,8 @@ ol li {
     padding: 10px 0;
 }
 
-.next_post , .prev_post {
+.next_post,
+.prev_post {
     height: 50px;
     width: 50px;
     background: var(--secondary-500);
@@ -2521,17 +2711,19 @@ ol li {
     border: 2px solid white;
     transition: 0.3s;
     background-size: cover;
-    background-blend-mode: overlay ;
+    background-blend-mode: overlay;
 }
 
-.next_post i , .prev_post i {
+.next_post i,
+.prev_post i {
     font-size: 28px;
     font-weight: 500;
     color: white;
 }
 
 
-.next_prev_main , .next_post_main {
+.next_prev_main,
+.next_post_main {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -2541,16 +2733,18 @@ ol li {
     flex-direction: row-reverse;
 }
 
-.next_post_main h4 , .next_prev_main h4 {
+.next_post_main h4,
+.next_prev_main h4 {
     font-weight: 600;
     font-size: 19px;
 }
 
-.next_post_main:hover  .next_post{
+.next_post_main:hover .next_post {
     background-image: url(../images/blog/blog_04.webp);
     background-color: #0004;
 }
-.next_prev_main:hover  .prev_post{
+
+.next_prev_main:hover .prev_post {
     background-image: url(../images/blog/blog_01.webp);
     background-color: #0004;
 }
@@ -2562,18 +2756,23 @@ ol li {
     flex-direction: column;
     gap: 20px;
 }
+
 .single_blog_side_card {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(101px, 1fr));
     gap: 20px;
 }
+
 .side_card {
     height: 108px;
 }
+
 .store_bar {
     flex: 0 0 290px;
 }
+
 .side_blog {
     margin-bottom: 10px;
 }
+
 /*==========single blog end   ========== */
