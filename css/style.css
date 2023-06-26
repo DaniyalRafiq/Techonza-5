@@ -427,7 +427,7 @@ header {
     position: absolute;
     height: 30px;
     width: 100%;
-    bottom: -50px;
+    bottom: -26px;
     background: white;
     z-index: 4;
 }
@@ -563,7 +563,9 @@ header {
     grid-template-columns: repeat(auto-fill, minmax(157px, 1fr));
     gap: 20px;
 }
-
+.store_cate_btn a {
+    font-size: 14px;
+}
 .store_card {
     display: flex;
     flex-direction: column;
@@ -576,6 +578,10 @@ header {
     height: 100%;
     overflow: hidden;
     border: 1px solid #0004;
+}
+.Store_cate_title {
+    padding-bottom: 5px ;
+    border-bottom: 2px solid var(--primary-500);
 }
 
 .store_card_title:after {
@@ -635,6 +641,8 @@ header {
     font-size: 29px;
     font-weight: 600;
     font-size: clamp(29px, 5vw, 20px);
+    z-index: 9;
+    position: relative;
 }
 
 .main_heading {
@@ -642,6 +650,8 @@ header {
     border-left: 3px solid var(--primary-100);
     border-radius: 10px;
     margin-bottom: 30px;
+    position: relative;
+    z-index: 9;
 }
 
 .blog {
@@ -1136,7 +1146,7 @@ header {
 
 .popular_store {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(152px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(149px, 1fr));
     gap: 15px;
 }
 
@@ -1257,11 +1267,6 @@ header {
 }
 
 .side_bar {
-    flex: 0 0 400px;
-    padding: 15px 20px;
-    box-shadow: 0px 0px 2px #0004;
-    border-radius: 5px;
-    top: 0;
 }
 
 .contact_main {
@@ -1657,6 +1662,7 @@ header {
     border-bottom: 1px solid #f1f1f1;
     padding: 10px 0;
     margin-bottom: 30px;
+    padding-bottom: 0;
 }
 
 .Store_cate_title {
@@ -1678,6 +1684,7 @@ header {
     box-shadow: 0px 0px 5px #0004;
     padding: 5px;
     gap: 20px;
+    flex: 0 0 400px;
 }
 
 .side_bar_tags {
